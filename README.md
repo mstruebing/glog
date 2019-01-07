@@ -1,4 +1,9 @@
-# WIP
+# Glog - a golang logging library made for simplicity
+[![Build Status](https://travis-ci.org/mstruebing/glog.svg?branch=master)](https://travis-ci.org/mstruebing/glog)
+[![codecov](https://codecov.io/gh/mstruebing/glog/branch/master/graph/badge.svg)](https://codecov.io/gh/mstruebing/glog)
+[![Go Report Card](https://goreportcard.com/badge/github.com/mstruebing/glog)](https://goreportcard.com/report/github.com/mstruebing/glog)
+
+## This is currently WIP
 
 Look at `./example` for what it is doing.
 
