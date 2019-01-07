@@ -11,7 +11,7 @@ type Logger struct {
 }
 
 func (l Logger) Print(a ...interface{}) (int, error) {
-	return fmt.Fprint(l.Target, a)
+	return fmt.Fprint(l.Target, a...)
 }
 
 func (l Logger) Printf(format string, a ...interface{}) (int, error) {
