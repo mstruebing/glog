@@ -7,9 +7,7 @@
 
 Look at `./example` for what it is doing.
 
-
-```go
-// Package main provides ...
+```
 package main
 
 import (
@@ -20,15 +18,18 @@ import (
 )
 
 func main() {
-	stderrLogger := console.StderrLogger()
-	stderrLogger.Println("This logs to stderr")
+	// console logging
+	console.Error("This logs to stderr too")
+	console.Log("This logs to stdout too")
 
-	stdoutLogger := console.StdoutLogger()
-	stdoutLogger.Println("This logs to stdout")
-
+	// file logging
 	fileLogger := file.Logger{Target: "/tmp/mystuff.txt"}
 	fileLogger.Println("This logs to a file")
+	fileLogger.Printf("This logs to a %s\n", "file")
 
+	file.Log("/tmp/mystuff.txt", "Another file log")
+
+	// anywhere logging (io.Writer needed)
 	genericLogger := glog.Logger{Target: os.Stdout}
 	genericLogger.Println("Logs to stdout from genericLogger")
 }
